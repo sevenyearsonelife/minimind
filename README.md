@@ -234,6 +234,20 @@ git clone https://github.com/jingyaogong/minimind.git
 pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 ```
 
+（推荐）使用 `uv` 配置虚拟环境（项目根目录执行）：
+
+```bash
+# 安装 uv（macOS 可用：brew install uv）
+# https://docs.astral.sh/uv/
+
+# 自动选择 .python-version 指定的 Python（3.10.16）
+uv python install
+
+# 生成锁文件并安装依赖到 .venv/
+uv lock
+uv sync
+```
+
 ### 2.下载模型
 
 到项目根目录
@@ -272,6 +286,20 @@ vllm serve ./MiniMind2/ --served-model-name "minimind"
 
 ```bash
 pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+```
+
+（推荐）使用 `uv` 配置虚拟环境（项目根目录执行）：
+
+```bash
+# 安装 uv（macOS 可用：brew install uv）
+# https://docs.astral.sh/uv/
+
+# 自动选择 .python-version 指定的 Python（3.10.16）
+uv python install
+
+# 生成锁文件并安装依赖到 .venv/
+uv lock
+uv sync
 ```
 
 <details style="color:rgb(128,128,128)">
